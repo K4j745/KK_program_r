@@ -12,7 +12,7 @@ navbar:
   right:
   - icon: fab fa-github
     text: Source code
-    href: https://github.com/https://github.com/K4j745/KK_program_r.git/KK_program_r
+    href: https://github.com/K4j745/KK_program_r
 output:
   workflowr::wflow_html:
     toc: yes
