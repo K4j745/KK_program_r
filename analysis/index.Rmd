@@ -10,6 +10,3 @@ editor_options:
 
 Welcome to my research website.
 
-
-install.packages("usethis")
-usethis::use_git()
