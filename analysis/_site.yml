@@ -1,7 +1,7 @@
-name: "KK_program_r"
+name: KK_program_r
 output_dir: ../docs
 navbar:
-  title: "KK_program_r"
+  title: KK_program_r
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fab fa-github
+    text: Source code
+    href: https://github.com/https://github.com/K4j745/KK_program_r.git/KK_program_r
 output:
   workflowr::wflow_html:
     toc: yes
