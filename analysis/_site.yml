@@ -3,12 +3,18 @@ output_dir: ../docs
 navbar:
   title: KK_program_r
   left:
-  - text: Home
-    href: index.html
-  - text: About
-    href: about.html
-  - text: License
-    href: license.html
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "CV"
+      icon: fa-file-text
+      href: cv.html
+    - text: "Analiza danych"
+      icon: fa-bar-chart
+      href: analiza.html
+    - text: "Prezentacja"
+      icon: fa-slideshare
+      href: prezentacja.html
   right:
   - icon: fab fa-github
     text: Source code

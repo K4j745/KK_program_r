@@ -258,6 +258,9 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
+  <a href="cv.html">CV</a>
+</li>
+<li>
   <a href="about.html">About</a>
 </li>
 <li>
@@ -289,7 +292,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -300,8 +303,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -310,13 +313,13 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2026-01-03
+<strong>Last updated:</strong> 2026-01-05
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>KK_program_r/</code> <span
@@ -339,33 +342,120 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtreea8ff50ee2ea7fed12805620fe0d6d310ed0714cctargetblanka8ff50ea">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20260103code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20260103)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20260103code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20260103)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtreed735e644723a270b1a7d5517c812b621b22186fbtargetblankd735e64a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/K4j745/KK_program_r/tree/a8ff50ee2ea7fed12805620fe0d6d310ed0714cc" target="_blank">a8ff50e</a>
+<a href="https://github.com/K4j745/KK_program_r/tree/d735e644723a270b1a7d5517c812b621b22186fb" target="_blank">d735e64</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtreea8ff50ee2ea7fed12805620fe0d6d310ed0714cctargetblanka8ff50ea"
+id="strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtreed735e644723a270b1a7d5517c812b621b22186fbtargetblankd735e64a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -375,7 +465,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/K4j745/KK_program_r/tree/a8ff50ee2ea7fed12805620fe0d6d310ed0714cc" target="_blank">a8ff50e</a>.
+<a href="https://github.com/K4j745/KK_program_r/tree/d735e644723a270b1a7d5517c812b621b22186fb" target="_blank">d735e64</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -393,6 +483,17 @@ Ignored files:
     Ignored:    .RData
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
+    Ignored:    analysis/figure/
+    Ignored:    analysis/index.html
+    Ignored:    analysis/site_libs/
+
+Untracked files:
+    Untracked:  analysis/assets/
+
+Unstaged changes:
+    Modified:   analysis/_site.yml
+    Deleted:    analysis/images/uczelnia.jpg
+    Modified:   analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -437,6 +538,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/K4j745/KK_program_r/5ec6c15d32fa27599ec6c93e455f78ade39d9792/docs/index.html" target="_blank">5ec6c15</a>
+</td>
+<td>
+Kajetan
+</td>
+<td>
+2026-01-03
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -512,7 +630,96 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>Welcome to my research website.</p>
+<div id="witaj-na-mojej-stronie" class="section level1">
+<h1>Witaj na mojej stronie!</h1>
+<div id="o-mnie" class="section level2">
+<h2>O mnie</h2>
+<p><strong>Imię i nazwisko:</strong> Jan Kowalski<br />
+<strong>Kierunek studiów:</strong> Informatyka<br />
+<strong>Uczelnia:</strong> Uniwersytet Przyrodniczy w Poznaniu</p>
+<hr />
+</div>
+<div id="poznań-university-of-life-sciences" class="section level2">
+<h2>Poznań University of Life Sciences</h2>
+<div class="float">
+<img src="assets/uczelnia.jpg"
+alt="Uniwersytet Przyrodniczy w Poznaniu" />
+<div class="figcaption">Uniwersytet Przyrodniczy w Poznaniu</div>
+</div>
+<p><em>Wojska Polskiego 28, Poznań</em></p>
+<hr />
+</div>
+<div id="o-tej-stronie" class="section level2">
+<h2>O tej stronie</h2>
+<p>Ta strona została stworzona przy użyciu pakietu
+<strong>workflowr</strong> w języku R.</p>
+<p>Workflowr to narzędzie do tworzenia zorganizowanych, reprodukowalnych
+i możliwych do udostępnienia projektów analitycznych danych.</p>
+<div id="struktura-strony" class="section level3">
+<h3>Struktura strony:</h3>
+<ul>
+<li><strong>Home</strong> - strona główna z informacjami o mnie</li>
+<li><strong>CV</strong> - moje curriculum vitae</li>
+<li><strong>Analiza danych</strong> - projekt analizy danych w R z
+wizualizacjami</li>
+<li><strong>Prezentacja</strong> - prezentacja moich zainteresowań</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="workflow" class="section level2">
+<h2>Workflow</h2>
+<p><img src="figure/index.Rmd/workflow-diagram-1.png" width="672" style="display: block; margin: auto;" /></p>
+<hr />
+<p><em>Strona zaktualizowana: 2026-01-05</em></p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.3.2 (2023-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 11 x64 (build 26100)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=Polish_Poland.utf8  LC_CTYPE=Polish_Poland.utf8   
+[3] LC_MONETARY=Polish_Poland.utf8 LC_NUMERIC=C                  
+[5] LC_TIME=Polish_Poland.utf8    
+
+time zone: Europe/Warsaw
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] ggplot2_4.0.1   workflowr_1.7.2
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.6       jsonlite_1.8.9     dplyr_1.1.4        compiler_4.3.2    
+ [5] promises_1.3.2     tidyselect_1.2.1   Rcpp_1.0.13-1      stringr_1.5.1     
+ [9] git2r_0.36.2       callr_3.7.6        later_1.4.1        jquerylib_0.1.4   
+[13] scales_1.4.0       yaml_2.3.10        fastmap_1.2.0      R6_2.5.1          
+[17] labeling_0.4.3     generics_0.1.3     knitr_1.49         tibble_3.2.1      
+[21] rprojroot_2.1.1    RColorBrewer_1.1-3 bslib_0.8.0        pillar_1.9.0      
+[25] rlang_1.1.4        utf8_1.2.4         cachem_1.1.0       stringi_1.8.4     
+[29] httpuv_1.6.15      xfun_0.50          S7_0.2.0           getPass_0.2-4     
+[33] fs_1.6.5           sass_0.4.9         cli_3.6.3          withr_3.0.2       
+[37] magrittr_2.0.3     ps_1.9.0           grid_4.3.2         digest_0.6.37     
+[41] processx_3.8.6     rstudioapi_0.17.1  lifecycle_1.0.4    vctrs_0.6.5       
+[45] evaluate_1.0.3     glue_1.8.0         farver_2.1.2       whisker_0.4.1     
+[49] fansi_1.0.6        rmarkdown_2.29     httr_1.4.7         tools_4.3.2       
+[53] pkgconfig_2.0.3    htmltools_0.5.8.1 </code></pre>
+</div>
+</div>
+</div>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
