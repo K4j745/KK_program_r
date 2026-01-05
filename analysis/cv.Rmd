@@ -1,0 +1,211 @@
+---
+title: "Curriculum Vitae"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: true
+    toc_float: true
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(knitr)
+```
+
+# Jan Kowalski
+
+---
+
+## Dane kontaktowe
+
+```{r contact-info}
+kontakt <- data.frame(
+  Kategoria = c("Email", "Telefon", "LinkedIn", "GitHub", "Lokalizacja"),
+  Informacje = c(
+    "jan.kowalski@student.up.poznan.pl",
+    "+48 123 456 789",
+    "linkedin.com/in/jankowalski",
+    "github.com/jankowalski",
+    "Poznań, Polska"
+  )
+)
+
+kable(kontakt, col.names = c("", ""), align = 'l')
+```
+
+---
+
+## Wykształcenie
+
+### Uniwersytet Przyrodniczy w Poznaniu
+**Kierunek:** Informatyka  
+**Stopień:** Licencjat (w trakcie)  
+**Okres:** 2022 - obecnie  
+
+**Wybrane przedmioty:**
+- Programowanie w R i Python
+- Bazy danych
+- Analiza danych
+- Statystyka i probabilistyka
+- Algorytmy i struktury danych
+
+```{r education-chart}
+# Wykres przedstawiający postęp w nauce
+przedmioty <- data.frame(
+  Przedmiot = c("R/Python", "Bazy danych", "Statystyka", 
+                "Algorytmy", "Web Development"),
+  Poziom = c(85, 75, 80, 70, 65)
+)
+
+ggplot(przedmioty, aes(x = reorder(Przedmiot, Poziom), y = Poziom, fill = Przedmiot)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  scale_fill_brewer(palette = "Set2") +
+  labs(
+    title = "Ocena umiejętności z kluczowych przedmiotów",
+    x = "",
+    y = "Poziom zaawansowania (%)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+    axis.text = element_text(size = 11)
+  ) +
+  geom_text(aes(label = paste0(Poziom, "%")), hjust = -0.2, size = 4)
+```
+
+---
+
+## Umiejętności
+
+### Języki programowania
+
+```{r skills-programming}
+umiejetnosci_prog <- data.frame(
+  Jezyk = c("R", "Python", "SQL", "JavaScript", "C++"),
+  Poziom = c("Zaawansowany", "Średniozaawansowany", "Średniozaawansowany", 
+             "Podstawowy", "Podstawowy"),
+  Lata_doswiadczenia = c(2, 1.5, 1, 0.5, 1)
+)
+
+kable(umiejetnosci_prog, 
+      col.names = c("Język", "Poziom", "Lata doświadczenia"),
+      align = 'l')
+```
+
+### Narzędzia i technologie
+
+- **Analiza danych:** R (tidyverse, ggplot2), Python (pandas, matplotlib)
+- **Wersjonowanie:** Git, GitHub
+- **Bazy danych:** MySQL, PostgreSQL, SQLite
+- **Inne:** RMarkdown, Quarto, LaTeX, Jupyter Notebook
+- **Systemy operacyjne:** Windows, Linux (Ubuntu)
+
+### Umiejętności miękkie
+
+- Praca zespołowa
+- Zarządzanie czasem
+- Komunikacja
+- Analityczne myślenie
+- Rozwiązywanie problemów
+
+---
+
+## Doświadczenie i projekty
+
+### Projekty studenckie
+
+**1. Analiza danych dotyczących jakości powietrza w Polsce**  
+*Październik 2024 - Grudzień 2024*
+
+- Pobranie i czyszczenie danych z publicznych API
+- Analiza trendów zanieczyszczenia powietrza
+- Wizualizacja danych za pomocą ggplot2
+- Utworzenie interaktywnego dashboardu w Shiny
+
+**2. System zarządzania biblioteką - projekt bazodanowy**  
+*Marzec 2024 - Maj 2024*
+
+- Projektowanie schematu relacyjnej bazy danych
+- Implementacja w MySQL
+- Utworzenie interfejsu w R z pakietem RMySQL
+- Generowanie raportów i statystyk
+
+**3. Strona z wizualizacjami danych - workflowr**  
+*Styczeń 2025*
+
+- Utworzenie reprodukowalnego projektu analitycznego
+- Implementacja z użyciem workflowr
+- Analiza i wizualizacja wybranego zbioru danych
+- Publikacja w formie strony HTML
+
+---
+
+## Kursy i certyfikaty
+
+```{r courses}
+kursy <- data.frame(
+  Nazwa = c(
+    "R for Data Science",
+    "Introduction to SQL",
+    "Python for Data Analysis",
+    "Git and GitHub"
+  ),
+  Platforma = c("DataCamp", "Coursera", "Udemy", "Coursera"),
+  Rok = c(2023, 2023, 2024, 2024)
+)
+
+kable(kursy, col.names = c("Nazwa kursu", "Platforma", "Rok ukończenia"))
+```
+
+---
+
+## Zainteresowania
+
+- **Analiza danych i machine learning**
+- **Wizualizacja danych**
+- **Open source i reproducible research**
+- **Sport:** piłka nożna, siatkówka
+- **Fotografia krajobrazowa**
+
+---
+
+## Języki obce
+
+- **Polski:** Język ojczysty
+- **Angielski:** B2/C1 - biegły
+- **Niemiecki:** A2 - podstawowy
+
+---
+
+```{r skills-visualization}
+# Wizualizacja umiejętności językowych
+jezyki <- data.frame(
+  Jezyk = c("Polski", "Angielski", "Niemiecki"),
+  Poziom = c(100, 85, 40)
+)
+
+ggplot(jezyki, aes(x = "", y = Poziom, fill = Jezyk)) +
+  geom_col(width = 1) +
+  coord_polar(theta = "y") +
+  scale_fill_manual(values = c("#E63946", "#457B9D", "#F1FAEE")) +
+  theme_void() +
+  labs(title = "Znajomość języków obcych") +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+    legend.position = "right"
+  ) +
+  geom_text(aes(label = paste0(Poziom, "%")), 
+            position = position_stack(vjust = 0.5),
+            size = 5, fontface = "bold")
+```
+
+---
+
+*CV zaktualizowane: `r Sys.Date()`*
+
+**Klauzula RODO:**  
+Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w niniejszym CV w celu realizacji procesu rekrutacji.
