@@ -1,0 +1,268 @@
+---
+title: "Moje pasje i zainteresowania"
+subtitle: "Koszykówka, Film i Sztuka"
+author: "Kajetan Kaczyński"
+date: "`r Sys.Date()`"
+format:
+  revealjs:
+    theme: moon
+    transition: slide
+    slide-number: true
+    preview-links: auto
+    width: 1400
+    height: 900
+    output-file: "../docs/prezentacja.html"
+---
+
+## O mnie {background-color="#2A9D8F"}
+
+::: {.columns}
+::: {.column width="60%"}
+**Kim jestem?**
+
+- 🎓 Student informatyki
+- 🏀 Pasjonat koszykówki
+- 🎬 Miłośnik kina
+- 🎨 Fascynat sztuki surrealistycznej
+- 💻 Entuzjasta analizy danych
+:::
+
+::: {.column width="40%"}
+![](https://via.placeholder.com/350x350/2A9D8F/ffffff?text=Twoje+zdjecie)
+:::
+:::
+
+---
+
+## Pasja #1: Koszykówka 🏀 {background-color="#E63946"}
+
+### Dlaczego koszykówka?
+
+::: {.incremental}
+- 🏃 Dynamiczna i wymagająca gra zespołowa
+- 🎯 Rozwija koncentrację i refleks
+- 🤝 Uczy współpracy i komunikacji
+- 💪 Świetna forma aktywności fizycznej
+:::
+
+### Moje statystyki:
+
+- **Trening:** 3-4 razy w tygodniu
+- **Pozycja:** Rozgrywający
+- **Ulubiony zespół NBA:** Los Angeles Lakers
+- **Ulubiony zawodnik:** LeBron James
+
+---
+
+## Aktywność na boisku {background-color="#E63946"}
+
+```{r basketball-stats, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=6, fig.align='center'}
+library(ggplot2)
+library(dplyr)
+
+# Dane o aktywności koszykarskiej w ciągu roku
+basketball_data <- data.frame(
+  Miesiac = factor(c("Sty", "Lut", "Mar", "Kwi", "Maj", "Cze", 
+                     "Lip", "Sie", "Wrz", "Paź", "Lis", "Gru"),
+                   levels = c("Sty", "Lut", "Mar", "Kwi", "Maj", "Cze", 
+                             "Lip", "Sie", "Wrz", "Paź", "Lis", "Gru")),
+  Treningi = c(12, 14, 16, 15, 18, 20, 22, 20, 18, 16, 15, 14),
+  Mecze = c(4, 5, 6, 5, 7, 8, 6, 5, 7, 6, 5, 4)
+)
+
+ggplot(basketball_data, aes(x = Miesiac)) +
+  geom_line(aes(y = Treningi, group = 1, color = "Treningi"), 
+            size = 2, alpha = 0.8) +
+  geom_point(aes(y = Treningi, color = "Treningi"), 
+             size = 5, alpha = 0.9) +
+  geom_line(aes(y = Mecze * 2, group = 1, color = "Mecze"), 
+            size = 2, alpha = 0.8) +
+  geom_point(aes(y = Mecze * 2, color = "Mecze"), 
+             size = 5, alpha = 0.9) +
+  scale_y_continuous(
+    name = "Liczba treningów",
+    sec.axis = sec_axis(~./2, name = "Liczba meczów")
+  ) +
+  scale_color_manual(values = c("Treningi" = "#FFB703", "Mecze" = "#FB8500")) +
+  labs(
+    title = "Moja aktywność koszykarska w 2024 roku",
+    x = "Miesiąc",
+    color = "Typ aktywności"
+  ) +
+  theme_minimal(base_size = 18) +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 24),
+    legend.position = "top",
+    legend.text = element_text(size = 16),
+    axis.title = element_text(size = 18, face = "bold"),
+    axis.text = element_text(size = 16),
+    panel.grid.minor = element_blank()
+  )
+```
+
+---
+
+## Pasja #2: Filmy 🎬 {background-color="#457B9D"}
+
+### Moje ulubione gatunki:
+
+::: {.columns}
+::: {.column width="50%"}
+**Gatunki filmowe:**
+
+- 🎭 **Dramat psychologiczny**
+- 🧠 **Sci-Fi filozoficzne**
+- 🎨 **Kino artystyczne**
+- 🕵️ **Thrillery**
+:::
+
+::: {.column width="50%"}
+**Ulubieni reżyserzy:**
+
+- Christopher Nolan
+- Denis Villeneuve
+- David Fincher
+- Quentin Tarantino
+:::
+:::
+
+### Top 5 filmów wszech czasów:
+
+1. **Interstellar** (2014) - Christopher Nolan
+2. **Blade Runner 2049** (2017) - Denis Villeneuve
+3. **Incepcja** (2010) - Christopher Nolan
+4. **Ojciec Chrzestny** (1972) - Francis Ford Coppola
+5. **Pulp Fiction** (1994) - Quentin Tarantino
+
+---
+
+## Moja filmoteka {background-color="#457B9D"}
+
+```{r movies-chart, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=6, fig.align='center'}
+library(ggplot2)
+
+# Dane o obejrzanych filmach według gatunku
+movie_genres <- data.frame(
+  Gatunek = c("Sci-Fi", "Dramat", "Thriller", "Kino\nartystyczne", 
+              "Komedia", "Horror"),
+  Liczba = c(45, 38, 32, 25, 18, 12)
+)
+
+ggplot(movie_genres, aes(x = reorder(Gatunek, Liczba), y = Liczba, fill = Gatunek)) +
+  geom_col(show.legend = FALSE, alpha = 0.9, width = 0.7) +
+  geom_text(aes(label = Liczba), hjust = -0.3, size = 7, fontface = "bold") +
+  coord_flip() +
+  scale_fill_brewer(palette = "Set2") +
+  labs(
+    title = "Obejrzane filmy w 2024 roku według gatunku",
+    x = "",
+    y = "Liczba obejrzanych filmów"
+  ) +
+  theme_minimal(base_size = 18) +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 24),
+    axis.text = element_text(size = 18, face = "bold"),
+    axis.title.x = element_text(size = 18, face = "bold"),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank()
+  ) +
+  ylim(0, 50)
+```
+
+---
+
+## Pasja #3: Sztuka - Salvador Dalí 🎨 {background-color="#F4A261"}
+
+### Dlaczego surrealizm?
+
+::: {.incremental}
+- 🌀 **Przekraczanie granic rzeczywistości** - sztuka, która prowokuje do myślenia
+- 🧩 **Symbolika i metafory** - każdy obraz to zagadka do rozwiązania
+- 💭 **Podświadomość na płótnie** - wizualizacja snów i marzeń
+- 🎭 **Salvador Dalí** - mistrz surrealizmu i ekscentryczny geniusz
+:::
+
+---
+
+## Moje ulubione dzieła Dalego {background-color="#F4A261"}
+
+::: {.columns}
+::: {.column width="50%"}
+**Top 3 obrazy:**
+
+1. **"Trwałość pamięci"** (1931)
+   - Słynne "miękkie zegary"
+   - Symbol płynności czasu
+
+2. **"Słonie"** (1948)
+   - Surrealistyczne stworzenia
+   - Kontrast ciężkości i lekkości
+
+3. **"Pokusa św. Antoniego"** (1946)
+   - Walka duchowa
+   - Fantastyczne wizje
+:::
+
+::: {.column width="50%"}
+```{r dali-visits, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=5, fig.align='center'}
+library(ggplot2)
+
+# Odwiedzone muzea z dziełami Dalego
+museums <- data.frame(
+  Muzeum = c("Figueres\n(Hiszpania)", "MoMA\n(Nowy Jork)", 
+             "Reina Sofia\n(Madryt)", "Tate Modern\n(Londyn)"),
+  Wizyty = c(0, 0, 0, 1),
+  Status = c("Planowane", "Planowane", "Planowane", "Odwiedzone")
+)
+
+ggplot(museums, aes(x = reorder(Muzeum, Wizyty), y = 1, fill = Status)) +
+  geom_tile(color = "white", size = 2, width = 0.9, height = 0.6) +
+  geom_text(aes(label = Muzeum), size = 6, fontface = "bold", color = "white") +
+  scale_fill_manual(values = c("Odwiedzone" = "#2A9D8F", "Planowane" = "#E76F51")) +
+  labs(
+    title = "Muzea z dziełami Dalego",
+    fill = "Status"
+  ) +
+  theme_void(base_size = 16) +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 20, margin = margin(b = 20)),
+    legend.position = "top",
+    legend.text = element_text(size = 14)
+  )
+```
+:::
+:::
+
+---
+
+## Moja filozofia życiowa 💭 {background-color="#2A9D8F"}
+
+::: {.r-fit-text}
+> **"Życie to sztuka w ruchu"**
+:::
+
+<br>
+
+### Co mnie napędza:
+
+::: {.incremental}
+- 🏀 **Koszykówka** uczy mnie dyscypliny i pracy zespołowej
+- 🎬 **Filmy** pokazują różne perspektywy i historie ludzi
+- 🎨 **Sztuka Dalego** inspiruje do myślenia poza schematami
+- 💻 **Analiza danych** pozwala odkrywać ukryte wzorce
+:::
+
+<br>
+
+> *"Nie bój się perfekcji - nigdy jej nie osiągniesz"* — Salvador Dalí
+
+---
+
+## Dziękuję za uwagę! 🙏 {background-color="#E63946"}
+
+
+<br>
+
+::: {.r-fit-text}
+**Pytania?**
+:::

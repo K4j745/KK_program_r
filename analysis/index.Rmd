@@ -12,8 +12,8 @@ editor_options:
 
 ## O mnie
 
-**Imię i nazwisko:** Jan Kowalski  
-**Kierunek studiów:** Informatyka  
+**Imię i nazwisko:** Kajetan Kaczyński  
+**Kierunek studiów:** Informatyka i inżynieria danych 
 **Uczelnia:** Uniwersytet Przyrodniczy w Poznaniu  
 
 ---
@@ -41,28 +41,5 @@ Workflowr to narzędzie do tworzenia zorganizowanych, reprodukowalnych i możliw
 
 ---
 
-## Workflow
-
-```{r workflow-diagram, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-# Prosty diagram przedstawiający workflow projektu
-library(ggplot2)
-
-workflow_steps <- data.frame(
-  step = c("Przygotowanie\ndanych", "Analiza\nw R", "Wizualizacja", "Publikacja"),
-  order = 1:4,
-  y = rep(1, 4)
-)
-
-ggplot(workflow_steps, aes(x = order, y = y, label = step)) +
-  geom_point(size = 20, color = "#2E86AB") +
-  geom_text(color = "white", fontface = "bold", size = 3) +
-  geom_line(color = "#A23B72", size = 1.5, arrow = arrow(length = unit(0.3, "cm"))) +
-  theme_void() +
-  ylim(0.5, 1.5) +
-  ggtitle("Proces tworzenia projektu w workflowr") +
-  theme(plot.title = element_text(hjust = 0.5, size = 16, face = "bold"))
-```
-
----
 
 *Strona zaktualizowana: `r Sys.Date()`*

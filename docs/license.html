@@ -11,7 +11,7 @@
 
 
 
-<title>Home</title>
+<title>License</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -255,32 +255,13 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
-    <span class="fa fa-home"></span>
-     
-    Home
-  </a>
+  <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="cv.html">
-    <span class="fa fa-file-text"></span>
-     
-    CV
-  </a>
+  <a href="about.html">About</a>
 </li>
 <li>
-  <a href="analiza.html">
-    <span class="fa fa-bar-chart"></span>
-     
-    Analiza danych
-  </a>
-</li>
-<li>
-  <a href="prezentacja.html">
-    <span class="fa fa-slideshare"></span>
-     
-    Prezentacja
-  </a>
+  <a href="license.html">License</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -300,7 +281,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Home</h1>
+<h1 class="title toc-ignore">License</h1>
 
 </div>
 
@@ -308,7 +289,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -319,8 +300,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -329,13 +310,13 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2026-01-14
+<strong>Last updated:</strong> 2026-01-05
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>KK_program_r/</code> <span
@@ -358,120 +339,33 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
-</p>
-</div>
-<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
-<div class="panel-body">
-<p>Great job! The global environment was empty. Objects defined in the
-global environment can affect the analysis in your R Markdown file in
-unknown ways. For reproduciblity it’s best to always run the code in an
-empty environment.</p>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20260103code">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Seed:</strong>
-<code>set.seed(20260103)</code> </a>
-</p>
-</div>
-<div id="strongSeedstrongcodesetseed20260103code"
-class="panel-collapse collapse">
-<div class="panel-body">
-<p>The command <code>set.seed(20260103)</code> was run prior to running
-the code in the R Markdown file. Setting a seed ensures that any results
-that rely on randomness, e.g. subsampling or permutations, are
-reproducible.</p>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Session information:</strong>
-recorded </a>
-</p>
-</div>
-<div id="strongSessioninformationstrongrecorded"
-class="panel-collapse collapse">
-<div class="panel-body">
-<p>Great job! Recording the operating system, R version, and package
-versions is critical for reproducibility.</p>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Cache:</strong> none </a>
-</p>
-</div>
-<div id="strongCachestrongnone" class="panel-collapse collapse">
-<div class="panel-body">
-<p>Nice! There were no cached chunks for this analysis, so you can be
-confident that you successfully produced the results during this
-run.</p>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
-</p>
-</div>
-<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
-<div class="panel-body">
-<p>Great job! Using relative paths to the files within your workflowr
-project makes it easier to run your code on other machines.</p>
-</div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtreef0e0dec8c050bc83baeda73a7ec4a647b4fc92c1targetblankf0e0deca">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtree5ec6c15d32fa27599ec6c93e455f78ade39d9792targetblank5ec6c15a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/K4j745/KK_program_r/tree/f0e0dec8c050bc83baeda73a7ec4a647b4fc92c1" target="_blank">f0e0dec</a>
+<a href="https://github.com/K4j745/KK_program_r/tree/5ec6c15d32fa27599ec6c93e455f78ade39d9792" target="_blank">5ec6c15</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtreef0e0dec8c050bc83baeda73a7ec4a647b4fc92c1targetblankf0e0deca"
+id="strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtree5ec6c15d32fa27599ec6c93e455f78ade39d9792targetblank5ec6c15a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -481,7 +375,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/K4j745/KK_program_r/tree/f0e0dec8c050bc83baeda73a7ec4a647b4fc92c1" target="_blank">f0e0dec</a>.
+<a href="https://github.com/K4j745/KK_program_r/tree/5ec6c15d32fa27599ec6c93e455f78ade39d9792" target="_blank">5ec6c15</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -501,11 +395,15 @@ Ignored files:
     Ignored:    .Rproj.user/
 
 Untracked files:
-    Untracked:  analysis/analiza.Rmd
-    Untracked:  analysis/prezentacja.qmd
+    Untracked:  analysis/assets/
+    Untracked:  analysis/cv.Rmd
 
 Unstaged changes:
+    Deleted:    analysis/images/uczelnia.jpg
     Modified:   analysis/index.Rmd
+
+Staged changes:
+    New:        analysis/images/uczelnia.jpg
 
 </code></pre>
 <p>
@@ -523,10 +421,11 @@ have uncommitted changes.
 
 <p>
 These are the previous versions of the repository in which changes were
-made to the R Markdown (<code>analysis/index.Rmd</code>) and HTML
-(<code>docs/index.html</code>) files. If you’ve configured a remote Git
-repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
-in the table below to view the files as they were in that past version.
+made to the R Markdown (<code>analysis/license.Rmd</code>) and HTML
+(<code>docs/license.html</code>) files. If you’ve configured a remote
+Git repository (see <code>?wflow_git_remote</code>), click on the
+hyperlinks in the table below to view the files as they were in that
+past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -552,129 +451,10 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/K4j745/KK_program_r/f0e0dec8c050bc83baeda73a7ec4a647b4fc92c1/docs/index.html" target="_blank">f0e0dec</a>
-</td>
-<td>
-Kajetan
-</td>
-<td>
-2026-01-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/K4j745/KK_program_r/blob/8e06de4adf475a881650fcf4a021b6d1bed53567/analysis/index.Rmd" target="_blank">8e06de4</a>
-</td>
-<td>
-Kajetan
-</td>
-<td>
-2026-01-05
-</td>
-<td>
-Naprawiono strukturę projektu
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/K4j745/KK_program_r/8e06de4adf475a881650fcf4a021b6d1bed53567/docs/index.html" target="_blank">8e06de4</a>
-</td>
-<td>
-Kajetan
-</td>
-<td>
-2026-01-05
-</td>
-<td>
-Naprawiono strukturę projektu
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/K4j745/KK_program_r/5ec6c15d32fa27599ec6c93e455f78ade39d9792/docs/index.html" target="_blank">5ec6c15</a>
-</td>
-<td>
-Kajetan
-</td>
-<td>
-2026-01-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/K4j745/KK_program_r/blob/7c0e073e5a6101db50a581481eb80608346cb8c4/analysis/index.Rmd" target="_blank">7c0e073</a>
-</td>
-<td>
-Kajetan
-</td>
-<td>
-2026-01-03
-</td>
-<td>
-upload
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/K4j745/KK_program_r/d63626da144ffa3754f582ff5290415ce098d76f/docs/index.html" target="_blank">d63626d</a>
-</td>
-<td>
-Kajetan
-</td>
-<td>
-2026-01-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/K4j745/KK_program_r/blob/596bcdbee4dd2b8a9bf32bf9314c0a2df0901cd7/analysis/index.Rmd" target="_blank">596bcdb</a>
-</td>
-<td>
-Kajetan
-</td>
-<td>
-2026-01-03
-</td>
-<td>
-wflow_publish(all = TRUE)
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/K4j745/KK_program_r/blob/e9748951ab7074100666aa1c8f598c92da86a21d/analysis/index.Rmd" target="_blank">e974895</a>
+<a href="https://github.com/K4j745/KK_program_r/blob/e9748951ab7074100666aa1c8f598c92da86a21d/analysis/license.Rmd" target="_blank">e974895</a>
 </td>
 <td>
 Kajetan
@@ -693,84 +473,17 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<div id="witaj-na-mojej-stronie" class="section level1">
-<h1>Witaj na mojej stronie!</h1>
-<div id="o-mnie" class="section level2">
-<h2>O mnie</h2>
-<p><strong>Imię i nazwisko:</strong> Kajetan Kaczyński<br />
-<strong>Kierunek studiów:</strong> Informatyka i inżynieria danych
-<strong>Uczelnia:</strong> Uniwersytet Przyrodniczy w Poznaniu</p>
-<hr />
-</div>
-<div id="poznań-university-of-life-sciences" class="section level2">
-<h2>Poznań University of Life Sciences</h2>
-<div class="float">
-<img src="assets/uczelnia.jpg"
-alt="Uniwersytet Przyrodniczy w Poznaniu" />
-<div class="figcaption">Uniwersytet Przyrodniczy w Poznaniu</div>
-</div>
-<p><em>Wojska Polskiego 28, Poznań</em></p>
-<hr />
-</div>
-<div id="o-tej-stronie" class="section level2">
-<h2>O tej stronie</h2>
-<p>Ta strona została stworzona przy użyciu pakietu
-<strong>workflowr</strong> w języku R.</p>
-<p>Workflowr to narzędzie do tworzenia zorganizowanych, reprodukowalnych
-i możliwych do udostępnienia projektów analitycznych danych.</p>
-<div id="struktura-strony" class="section level3">
-<h3>Struktura strony:</h3>
-<ul>
-<li><strong>Home</strong> - strona główna z informacjami o mnie</li>
-<li><strong>CV</strong> - moje curriculum vitae</li>
-<li><strong>Analiza danych</strong> - projekt analizy danych w R z
-wizualizacjami</li>
-<li><strong>Prezentacja</strong> - prezentacja moich zainteresowań</li>
-</ul>
-<hr />
-<p><em>Strona zaktualizowana: 2026-01-14</em></p>
-<br>
-<p>
-<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
-<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-Session information
-</button>
-</p>
-<div id="workflowr-sessioninfo" class="collapse">
-<pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>R version 4.3.2 (2023-10-31 ucrt)
-Platform: x86_64-w64-mingw32/x64 (64-bit)
-Running under: Windows 11 x64 (build 26100)
-
-Matrix products: default
-
-
-locale:
-[1] LC_COLLATE=Polish_Poland.utf8  LC_CTYPE=Polish_Poland.utf8   
-[3] LC_MONETARY=Polish_Poland.utf8 LC_NUMERIC=C                  
-[5] LC_TIME=Polish_Poland.utf8    
-
-time zone: Europe/Warsaw
-tzcode source: internal
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-loaded via a namespace (and not attached):
- [1] vctrs_0.6.5       cli_3.6.3         knitr_1.49        rlang_1.1.4      
- [5] xfun_0.50         stringi_1.8.4     promises_1.3.2    jsonlite_1.8.9   
- [9] workflowr_1.7.2   glue_1.8.0        rprojroot_2.1.1   git2r_0.36.2     
-[13] htmltools_0.5.8.1 httpuv_1.6.15     sass_0.4.9        fansi_1.0.6      
-[17] rmarkdown_2.29    jquerylib_0.1.4   evaluate_1.0.3    tibble_3.2.1     
-[21] fastmap_1.2.0     yaml_2.3.10       lifecycle_1.0.4   whisker_0.4.1    
-[25] stringr_1.5.1     compiler_4.3.2    fs_1.6.5          Rcpp_1.0.13-1    
-[29] pkgconfig_2.0.3   rstudioapi_0.17.1 later_1.4.1       digest_0.6.37    
-[33] R6_2.5.1          utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3   
-[37] bslib_0.8.0       tools_4.3.2       cachem_1.1.0     </code></pre>
-</div>
-</div>
-</div>
-</div>
+<p>What license are you using for your code? See <a
+href="https://choosealicense.com/">choosealicense.com</a> for help
+deciding. It’s a convention to save a file <code>LICENSE</code> in the
+root of your Git repo that contains the license text.</p>
+<p>What license are you using for the written content on your site? It
+is traditional to choose a <a
+href="https://creativecommons.org/choose/">Creative Commons</a> license
+for this type of content.</p>
+<p>How should others cite your work? It’s a convention to save a file
+<code>CITATION</code> in the root of your Git repo that contains the
+citation information.</p>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using

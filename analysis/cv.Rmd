@@ -15,7 +15,7 @@ library(tidyverse)
 library(knitr)
 ```
 
-# Jan Kowalski
+# Kajetan Kaczyński
 
 ---
 
@@ -25,10 +25,10 @@ library(knitr)
 kontakt <- data.frame(
   Kategoria = c("Email", "Telefon", "LinkedIn", "GitHub", "Lokalizacja"),
   Informacje = c(
-    "jan.kowalski@student.up.poznan.pl",
+    "98462@student.up.poznan.pl",
     "+48 123 456 789",
-    "linkedin.com/in/jankowalski",
-    "github.com/jankowalski",
+    "linkedin.com/in/kaczynskikajetan",
+    "github.com/K4j745",
     "Poznań, Polska"
   )
 )
@@ -41,9 +41,9 @@ kable(kontakt, col.names = c("", ""), align = 'l')
 ## Wykształcenie
 
 ### Uniwersytet Przyrodniczy w Poznaniu
-**Kierunek:** Informatyka  
-**Stopień:** Licencjat (w trakcie)  
-**Okres:** 2022 - obecnie  
+**Kierunek:** Informatyka i inżynieria danych 
+**Stopień:** Inżynier (w trakcie)  
+**Okres:** 2023 - obecnie  
 
 **Wybrane przedmioty:**
 - Programowanie w R i Python
@@ -52,30 +52,7 @@ kable(kontakt, col.names = c("", ""), align = 'l')
 - Statystyka i probabilistyka
 - Algorytmy i struktury danych
 
-```{r education-chart}
-# Wykres przedstawiający postęp w nauce
-przedmioty <- data.frame(
-  Przedmiot = c("R/Python", "Bazy danych", "Statystyka", 
-                "Algorytmy", "Web Development"),
-  Poziom = c(85, 75, 80, 70, 65)
-)
 
-ggplot(przedmioty, aes(x = reorder(Przedmiot, Poziom), y = Poziom, fill = Przedmiot)) +
-  geom_col(show.legend = FALSE) +
-  coord_flip() +
-  scale_fill_brewer(palette = "Set2") +
-  labs(
-    title = "Ocena umiejętności z kluczowych przedmiotów",
-    x = "",
-    y = "Poziom zaawansowania (%)"
-  ) +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
-    axis.text = element_text(size = 11)
-  ) +
-  geom_text(aes(label = paste0(Poziom, "%")), hjust = -0.2, size = 4)
-```
 
 ---
 
@@ -85,8 +62,8 @@ ggplot(przedmioty, aes(x = reorder(Przedmiot, Poziom), y = Poziom, fill = Przedm
 
 ```{r skills-programming}
 umiejetnosci_prog <- data.frame(
-  Jezyk = c("R", "Python", "SQL", "JavaScript", "C++"),
-  Poziom = c("Zaawansowany", "Średniozaawansowany", "Średniozaawansowany", 
+  Jezyk = c("R", "Python", "SQL", "QGIS", "C++"),
+  Poziom = c("Średniozaawansowany", "Średniozaawansowany", "Średniozaawansowany", 
              "Podstawowy", "Podstawowy"),
   Lata_doswiadczenia = c(2, 1.5, 1, 0.5, 1)
 )
@@ -107,7 +84,7 @@ kable(umiejetnosci_prog,
 ### Umiejętności miękkie
 
 - Praca zespołowa
-- Zarządzanie czasem
+- Punktualność
 - Komunikacja
 - Analityczne myślenie
 - Rozwiązywanie problemów
@@ -118,11 +95,11 @@ kable(umiejetnosci_prog,
 
 ### Projekty studenckie
 
-**1. Analiza danych dotyczących jakości powietrza w Polsce**  
+**1. Analiza rynków mięsnych**  
 *Październik 2024 - Grudzień 2024*
 
-- Pobranie i czyszczenie danych z publicznych API
-- Analiza trendów zanieczyszczenia powietrza
+- Pobranie i czyszczenie danych z GUS-u
+- Analiza trendów na rynku mięsa
 - Wizualizacja danych za pomocą ggplot2
 - Utworzenie interaktywnego dashboardu w Shiny
 
@@ -154,8 +131,8 @@ kursy <- data.frame(
     "Python for Data Analysis",
     "Git and GitHub"
   ),
-  Platforma = c("DataCamp", "Coursera", "Udemy", "Coursera"),
-  Rok = c(2023, 2023, 2024, 2024)
+  Platforma = c("W3Schools", "W3Schools", "W3Schools", "W3Schools"),
+  Rok = c(2023, 2023, 2024, 2025)
 )
 
 kable(kursy, col.names = c("Nazwa kursu", "Platforma", "Rok ukończenia"))
@@ -168,8 +145,9 @@ kable(kursy, col.names = c("Nazwa kursu", "Platforma", "Rok ukończenia"))
 - **Analiza danych i machine learning**
 - **Wizualizacja danych**
 - **Open source i reproducible research**
-- **Sport:** piłka nożna, siatkówka
-- **Fotografia krajobrazowa**
+- **Sport:** koszykówka, dart, piłka nożna
+- **Kinematografia**
+- **Kultura i sztuka**
 
 ---
 
