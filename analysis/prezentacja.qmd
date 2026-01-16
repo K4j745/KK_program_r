@@ -34,7 +34,7 @@ Koszykówka to jedna z moich głównych pasji. Cenię ją za dynamikę, pracę
 zespołową oraz aspekt analityczny (statystyki zawodników, analiza
 meczów).
 
-![Koszykówka](assets/lebronjames.jpg)
+![Koszykówka](../docs/assets/lebronjames.jpg)
 
 ------------------------------------------------------------------------
 
@@ -52,8 +52,8 @@ punkty <- data.frame(
 )
 
 ggplot(punkty, aes(x = rzut, y = wynik)) +
-  geom_line() +
-  geom_point() +
+  geom_line(color = "steelblue", linewidth = 1.2) +
+  geom_point(color = "darkred", size = 3) +
   labs(
     title = "Przykładowe wyniki rzutów w darcie",
     x = "Numer rzutu",
@@ -68,7 +68,7 @@ ggplot(punkty, aes(x = rzut, y = wynik)) +
 
 Interesuję się kinematografią, w szczególności lubię klasyki kina: The Big Lebowski, Kac Vegas, The Room, The Party at Kitty and Stud's
 
-![Kinematografia](assets/kubrickztemu.jpg)
+![Kinematografia](../docs/assets/kubrickztemu.jpg)
 
 ------------------------------------------------------------------------
 
@@ -77,7 +77,7 @@ Interesuję się kinematografią, w szczególności lubię klasyki kina: The Big
 Sztuka inspiruje mnie do kreatywnego myślenia i nieszablonowego
 podejścia do rozwiązywania problemów.
 
-![Sztuka](assets/daliwdomu.jpg)
+![Sztuka](../docs/assets/daliwdomu.jpg)
 
 ------------------------------------------------------------------------
 
@@ -93,14 +93,15 @@ dane <- data.frame(
   zainteresowanie = c(7, 6, 5, 9)
 )
 
-ggplot(dane, aes(x = kategoria, y = zainteresowanie)) +
+ggplot(dane, aes(x = kategoria, y = zainteresowanie, fill = kategoria)) +
   geom_col() +
   labs(
     title = "Poziom moich zainteresowań",
     x = "Obszar",
     y = "Poziom zainteresowania (1–10)"
   ) +
-  theme_minimal()
+  theme_minimal() +
+  guides(fill = "none")
 ```
 
 ------------------------------------------------------------------------
