@@ -11,7 +11,7 @@
 
 <meta name="author" content="Kajetan Kaczyński" />
 
-<meta name="date" content="2026-01-14" />
+<meta name="date" content="2026-01-16" />
 
 <title>Analiza danych dotyczących zachowań zdrowotnych i uzależnień</title>
 
@@ -381,7 +381,7 @@ div.tocify {
 <h1 class="title toc-ignore">Analiza danych dotyczących zachowań
 zdrowotnych i uzależnień</h1>
 <h4 class="author">Kajetan Kaczyński</h4>
-<h4 class="date">2026-01-14</h4>
+<h4 class="date">2026-01-16</h4>
 
 </div>
 
@@ -410,7 +410,7 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2026-01-14
+<strong>Last updated:</strong> 2026-01-16
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -544,15 +544,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtreedd69dc56c4fa036e4ccbe00f48bdd0d966735bf2targetblankdd69dc5a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtree1e31b9c4e70c803ec3b2b6c8d0462f393568eb8ftargetblank1e31b9ca">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/K4j745/KK_program_r/tree/dd69dc56c4fa036e4ccbe00f48bdd0d966735bf2" target="_blank">dd69dc5</a>
+<a href="https://github.com/K4j745/KK_program_r/tree/1e31b9c4e70c803ec3b2b6c8d0462f393568eb8f" target="_blank">1e31b9c</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtreedd69dc56c4fa036e4ccbe00f48bdd0d966735bf2targetblankdd69dc5a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomK4j745KKprogramrtree1e31b9c4e70c803ec3b2b6c8d0462f393568eb8ftargetblank1e31b9ca"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -562,7 +562,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/K4j745/KK_program_r/tree/dd69dc56c4fa036e4ccbe00f48bdd0d966735bf2" target="_blank">dd69dc5</a>.
+<a href="https://github.com/K4j745/KK_program_r/tree/1e31b9c4e70c803ec3b2b6c8d0462f393568eb8f" target="_blank">1e31b9c</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -580,9 +580,7 @@ Ignored files:
     Ignored:    .RData
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-
-Untracked files:
-    Untracked:  analysis/addiction_population_data.csv
+    Ignored:    analysis/prezentacja.html
 
 Unstaged changes:
     Modified:   analysis/analiza.Rmd
@@ -631,6 +629,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/K4j745/KK_program_r/blob/1e31b9c4e70c803ec3b2b6c8d0462f393568eb8f/analysis/analiza.Rmd" target="_blank">1e31b9c</a>
+</td>
+<td>
+Kajetan
+</td>
+<td>
+2026-01-14
+</td>
+<td>
+War_is_over
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/K4j745/KK_program_r/1e31b9c4e70c803ec3b2b6c8d0462f393568eb8f/docs/analiza.html" target="_blank">1e31b9c</a>
+</td>
+<td>
+Kajetan
+</td>
+<td>
+2026-01-14
+</td>
+<td>
+War_is_over
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -716,15 +748,53 @@ dane &lt;- read.csv(&quot;analysis/addiction_population_data.csv&quot;)</code></
 <div id="wykres-słupkowy-spożycie-alkoholu-według-płci"
 class="section level3">
 <h3>Wykres słupkowy – spożycie alkoholu według płci</h3>
-<pre class="r"><code>ggplot(alkohol_plec, aes(x = gender, y = srednia_liczba_drinkow)) +
+<pre class="r"><code>ggplot(alkohol_plec, aes(x = gender, y = srednia_liczba_drinkow, fill = gender)) +
   geom_col() +
   labs(
     title = &quot;Średnie tygodniowe spożycie alkoholu według płci&quot;,
     x = &quot;Płeć&quot;,
     y = &quot;Średnia liczba drinków na tydzień&quot;
   ) +
-  theme_minimal()</code></pre>
+  theme_minimal() +
+  guides(fill = &quot;none&quot;)</code></pre>
 <p><img src="figure/analiza.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-1">
+Past versions of unnamed-chunk-3-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-3-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/K4j745/KK_program_r/blob/1e31b9c4e70c803ec3b2b6c8d0462f393568eb8f/docs/figure/analiza.Rmd/unnamed-chunk-3-1.png" target="_blank">1e31b9c</a>
+</td>
+<td>
+Kajetan
+</td>
+<td>
+2026-01-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Komentarz: Wykres przedstawia różnice w średnim spożyciu alkoholu
 pomiędzy płciami.</p>
 <hr />
@@ -740,7 +810,8 @@ class="section level3">
   )
 
 ggplot(papierosy_wiek, aes(x = age, y = srednia_papierosow)) +
-  geom_line() +
+  geom_line(color = &quot;steelblue&quot;, linewidth = 1.2) +
+  geom_point(color = &quot;darkred&quot;, size = 2) +
   labs(
     title = &quot;Średnia liczba wypalanych papierosów w zależności od wieku&quot;,
     x = &quot;Wiek&quot;,
@@ -748,6 +819,43 @@ ggplot(papierosy_wiek, aes(x = age, y = srednia_papierosow)) +
   ) +
   theme_minimal()</code></pre>
 <p><img src="figure/analiza.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-4-1">
+Past versions of unnamed-chunk-4-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-4-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/K4j745/KK_program_r/blob/1e31b9c4e70c803ec3b2b6c8d0462f393568eb8f/docs/figure/analiza.Rmd/unnamed-chunk-4-1.png" target="_blank">1e31b9c</a>
+</td>
+<td>
+Kajetan
+</td>
+<td>
+2026-01-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Komentarz: Wykres pokazuje, jak intensywność palenia zmienia się wraz
 z wiekiem.</p>
 <hr />
@@ -755,7 +863,11 @@ z wiekiem.</p>
 <div id="histogram-rozkład-bmi" class="section level3">
 <h3>Histogram – rozkład BMI</h3>
 <pre class="r"><code>ggplot(dane, aes(x = bmi)) +
-  geom_histogram(bins = 30) +
+  geom_histogram(
+    bins = 30,
+    fill = &quot;skyblue&quot;,
+    color = &quot;black&quot;
+  ) +
   labs(
     title = &quot;Rozkład wskaźnika BMI&quot;,
     x = &quot;BMI&quot;,
@@ -763,6 +875,43 @@ z wiekiem.</p>
   ) +
   theme_minimal()</code></pre>
 <p><img src="figure/analiza.Rmd/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-5-1">
+Past versions of unnamed-chunk-5-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-5-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/K4j745/KK_program_r/blob/1e31b9c4e70c803ec3b2b6c8d0462f393568eb8f/docs/figure/analiza.Rmd/unnamed-chunk-5-1.png" target="_blank">1e31b9c</a>
+</td>
+<td>
+Kajetan
+</td>
+<td>
+2026-01-14
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Komentarz: Histogram pozwala ocenić rozkład BMI i częstość
 występowania nadwagi i otyłości.</p>
 </div>
